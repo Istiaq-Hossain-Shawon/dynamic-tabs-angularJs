@@ -1,0 +1,13 @@
+<tabset>
+  <tab ng-repeat="tab in tablist"
+  		heading="{{tab.title}}" active="tab.active" disabled="tab.disabled">
+	<tab-heading>
+	  {{tab.title}}
+	  <a class="button small" ng-click="deleteTab(tab.id)" href='' ><strong ng-hide="tab.title=='Test'">x</strong></a>
+	</tab-heading>
+  <div compile="tab.content"></div>
+  
+
+  </tab>
+</tabset>
+
